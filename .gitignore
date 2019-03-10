@@ -1,0 +1,24 @@
+.pym/*
+pymacaron
+pymacaron_async
+pymacaron_core
+pymacaron_dynamodb
+pymacaron_unit
+apis
+docker
+env/*
+pnt_expert
+deactivate/*
+Dockerfile
+Dockerrun.aws.json
+**/__pycache__
+*.tar
+**/*.pyc
+.ebextensions/aws-secrets.config
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+.ebextensions
