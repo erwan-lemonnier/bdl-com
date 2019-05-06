@@ -1,0 +1,32 @@
+name: bdl-com
+app_name_live: BDL_LIVE
+app_name_dev: BDL_DEV
+
+docker_repo: peop
+docker_bucket: pym-config
+
+aws_user: bdl-backend-publish
+aws_keypair: aws-eb
+aws_region: eu-central-1
+aws_instance_type: t2.micro
+aws_cert_arn: arn:aws:acm:eu-central-1:058475745091:certificate/d56bdb36-7e17-4534-90de-f4216c2aa9c6
+aws_hosts_min: 2
+aws_default_region: eu-central-1
+aws_access_key_id: AWS_BDL_ACCESS_KEY_ID
+aws_secret_access_key: AWS_BDL_SECRET_ACCESS_KEY
+
+jwt_issuer: BDL_JWT_ISSUER
+jwt_secret: BDL_JWT_SECRET
+jwt_audience: BDL_JWT_AUDIENCE
+
+live_host: bazardelux.com
+
+with_async: true
+
+env_secrets:
+  - BDL_JWT_SECRET
+  - BDL_JWT_AUDIENCE
+  - BDL_JWT_ISSUER
+  - AWS_BDL_SECRET_ACCESS_KEY
+  - AWS_BDL_ACCESS_KEY_ID
+
