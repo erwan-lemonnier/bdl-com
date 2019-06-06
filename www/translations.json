@@ -1,18 +1,28 @@
 {
   "LANG_EN": {
     "en": "English",
-    "sv": "Engelska"
+    "sv": "Engelska",
+    "fr": "French"
   },
   "LANG_SV": {
     "en": "Swedish",
-    "sv": "Svenska"
+    "sv": "Svenska",
+    "fr": "Suédois"
+  },
+  "LANG_FR": {
+    "en": "French",
+    "sv": "Franska",
+    "fr": "Français"
   },
 
   "COUNTRY_SE": {
     "en": "Sweden",
     "sv": "Sverige"
   },
-
+  "COUNTRY_FR": {
+    "en": "France",
+    "sv": "Frankrike"
+  },
 
   "MARKET_PAGE_TITLE": {
     "en": "",

@@ -1,35 +1,14 @@
-      <result class="result-picture grid-item hvr-grow" id="{{ item.uid|safe }}" style="display: none; opacity: 0;">
-
-        {% if show_expert_controls %}
-        <div class="item-expert-controls">
-            <button type="button" class="btn btn-default btn-sm btn-prio no-highlight {% if item.prio == 'high' %}btn-prio-active{% endif %}" onclick="click_priority_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ user_id|safe }}', 'high')">
-              <span>1</span>
-            </button>
-            <button type="button" class="btn btn-default btn-sm btn-prio no-highlight {% if item.prio == 'medium' %}btn-prio-active{% endif %}" onclick="click_priority_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ user_id|safe }}', 'medium')">
-              <span>2</span>
-            </button>
-            <button type="button" class="btn btn-default btn-sm btn-prio no-highlight {% if item.prio == 'normal' %}btn-prio-active{% endif %}" onclick="click_priority_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ user_id|safe }}', 'normal')">
-              <span>3</span>
-            </button>
-            <button type="button" class="btn btn-default btn-sm btn-prio no-highlight {% if item.prio == 'low' %}btn-prio-active{% endif %}" onclick="click_priority_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ user_id|safe }}', 'low')">
-              <span>4</span>
-            </button>
-        </div>
-        {% endif %}
-
-
-        <a class="grid-link" onclick="return item_click('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item_url_with_params|safe }}')" href="{{ item.url|safe }}">
-          <div class="item-price {% if item.cert_id %}item-price-certified{% elif item.expert_likes %}item-price-expert-likes{% endif %}">
-            <h2 style="opacity: 0;"><span>{{ item.price|safe }} {{item.currency|safe }}</span></h2>
+      <result class="result-picture grid-item hvr-grow" id="{{ item.item_id|safe }}" style="display: none; opacity: 0;">
+        <a class="grid-link" onclick="return item_click('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item_url_with_params|safe }}')" href="{{ item_url|safe }}">
+          <div class="item-price {% if item_heart %}item-price-expert-likes{% endif %}">
+            <h2 style="opacity: 0;"><span>{{ item.bdlitem.price|safe }} {{item.bdlitem.currency|safe }}</span></h2>
           </div>
-          <img src="{{ item.picture_url_w200|safe }}" alt="{{ item.title|safe }}" class="item-picture"/>
-          {% if item.cert_id %}
-          <svg class="item-icon-crown"><use xlink:href="#klue-crown"></use></svg>
-          {% elif item.expert_likes %}
+          <img src="{{ item.bdlitem.picture_url_w200|safe }}" alt="{{ item.bdlitem.title|safe }}" class="item-picture"/>
+          {% if item_heart %}
           <svg class="item-icon-likes"><use xlink:href="#heart-icon"></use></svg>
           {% endif %}
-          <div class="item-title {% if item.cert_id %}item-title-certified{% elif item.expert_likes %}item-title-expert-likes{% endif %}">
-            <h2><span>{{ item.title | safe }}</span></h2>
+          <div class="item-title {% if item_heart %}item-title-expert-likes{% endif %}">
+            <h2><span>{{ item.bdlitem.title | safe }}</span></h2>
           </div>
           <div class="item-buy">
           </div>

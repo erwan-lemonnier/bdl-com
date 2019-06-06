@@ -541,7 +541,9 @@ def do_search_market_html(query, page=0, country=None, lang=None, latest=False, 
             label_in_location=unicode_to_html(translate('MARKET_LABEL_IN_LOCATION', language)),
             item_country=translate('COUNTRY_%s' % item.bdlitem.country.upper(), language),
             item=item,
+            item_url=item.url,
             item_url_with_params='%s?%s' % (item.url, url_params),
+            item_heart=True if item.count_views > 10 else False,
         )
 
         htmls.append(html)
