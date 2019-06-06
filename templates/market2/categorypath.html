@@ -1,0 +1,17 @@
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="header-path">
+              {% for cat in category_data %}
+              <a href="{{ cat.url|safe }}"
+                 onclick="click_browse_link('{{ cat.name|safe }}', '{{ cat.url|safe }}'); return false;">
+                {{ cat.label|safe }}
+              </a>
+              {% if not cat.last %}
+              &gt;
+              {% endif %}
+
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+

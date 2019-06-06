@@ -1,0 +1,20 @@
+{% if is_popup %}
+<div id="item-detail" class="itemdetail-popup itemdetail mfp-hide">
+{% else %}
+<div id="" class="itemdetail">
+{% endif %}
+
+  <div class="container">
+    <div class="row">
+      {% include 'market2/itemdetail-mobile.html' %}
+      {% include 'market2/itemdetail-desktop.html' %}
+      {% include 'common/sharing.html' %}
+    </div>
+  </div>
+</div>
+
+<script>
+//<![CDATA[
+{% include 'market2/itemdetail.js' %}
+//]]>
+</script>

@@ -1,0 +1,14 @@
+pymacaron
+pymacaron-async
+pymacaron-dynamodb
+pycodestyle
+nose
+elasticsearch>=2.0.0,<3.0.0
+Flask-Babel==0.11.1
+Babel==2.3.4
+Flask-Compress==1.4.0
+requests-aws4auth==0.9
+Unidecode==0.4.19
+boto3
+beautifulsoup4==4.5.1
+lxml==3.6.4

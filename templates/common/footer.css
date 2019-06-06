@@ -1,0 +1,29 @@
+/* Footer css */
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 29px;
+    color: #8997A1;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    background-color: #FFFFFF;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    color: #141D26;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 500;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.footer a:hover, a:active {
+    color: inherit;
+    text-decoration: underline;
+}

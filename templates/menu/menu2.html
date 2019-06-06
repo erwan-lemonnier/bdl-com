@@ -1,0 +1,36 @@
+<div id="menu" class="menu2">
+  <style>
+    {% include 'menu/menu2.css' %}
+  </style>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-left">
+        <div class="icon-klue-div">
+          <img class="icon-klue item-hover" src="https://static.kluemarket.com/img/klue30.png" onclick="return click_menu('KlueLogo', '{{ url_link_logo|safe }}');" />
+        </div>
+        <div class="input-group input-group-sm search-input-div no-highlight">
+          <input type="text" class="form-control search-input no-highlight" id="input-query" name="input-query" placeholder="{{ label_search_placeholder|safe }}" {{ market_input_value_html|safe }} onKeyDown="if(event.keyCode==13) do_search('{{ language|safe }}');" autofocus>
+          <span class="input-group-btn no-highlight">
+            <button class="btn btn-default btn-lg btn-search btn-search-desktop no-highlight item-hover" type="submit" onclick="do_search('{{ language|safe }}')">
+              <svg class="btn-icon-glass"><use xlink:href="#search-glass-thin"></use></svg>
+            </button>
+            <button class="btn btn-default btn-lg btn-search btn-search-mobile no-highlight item-hover" type="submit" onclick="focus_search('{{ language|safe }}')">
+              <svg class="btn-icon-glass-mobile no-highlight"><use xlink:href="#search-glass"></use></svg>
+            </button>
+          </span>
+        </div>
+
+        <div class="btn-height">
+          <a href="{{ url_link_sell|safe }}" class="button btn btn-default btn-sell no-highlight" onclick="return click_menu('KlueSell', '{{ url_link_sell|safe }}');">{{ label_link_sell|safe }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    {% include 'menu/menu2.js' %}
+    //]]>
+  </script>
+</div>

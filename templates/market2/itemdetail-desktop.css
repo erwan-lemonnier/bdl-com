@@ -1,0 +1,236 @@
+.itemdetail-desktop {
+    display: none;
+    position: relative;
+    background: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .itemdetail-desktop {
+        display: block;
+    }
+}
+
+.itemdetail-desktop img {
+    max-width: 100%;
+}
+
+.itemdetail-desktop h1 {
+    margin: 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.itemdetail-desktop .cert-h1 {
+    padding-top: 8px;
+}
+
+.itemdetail-desktop h2 {
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .itemdetail-desktop h2 {
+        text-align: left;
+    }
+}
+
+.itemdetail-desktop h2 br {
+    /* set to same height as font-size for h2 */
+    display: block;
+    margin-top: 14px;
+    line-height: 14px;
+    content: " ";
+}
+
+.itemdetail-desktop .cert-header {
+    color: #536371;
+    font-weight: 700;
+}
+
+.itemdetail-desktop-picture {
+    padding-bottom: 10px;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+    .itemdetail-desktop-picture {
+        max-height: 360px;
+        padding-bottom: 15px;
+    }
+}
+
+/*
+ * Review/certified labels
+ */
+
+.itemdetail-desktop h3 {
+    line-height: 14px;
+    padding: 0 0;
+    margin: 0 0;
+    color: #536371;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.itemdetail-desktop h3 a {
+    text-decoration: underline;
+}
+
+.itemdetail-desktop h3 a:hover {
+    opacity: .7;
+    filter: alpha(opacity=70);
+}
+
+.itemdetail-desktop .item-icon-likes {
+    float: left;
+    height: 35px;
+    width: 35px;
+    position: inherit;
+    left: none;
+    bottom: none;
+    vertical-align: middle;
+}
+
+.itemdetail-desktop .item-icon-crown {
+    float: left;
+    position: inherit;
+    left: none;
+    bottom: none;
+    height: 45px;
+    width: 45px;
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width: 400px) {
+    .itemdetail-desktop h3 {
+        font-size: 10px;
+    }
+}
+
+.itemdetail-desktop .link-sell {
+    padding-top: 10px;
+    font-size: 12px;
+    display: block;
+    clear: both;
+}
+
+.itemdetail-desktop .link-sell a {
+    text-decoration: underline;
+}
+
+.itemdetail-desktop .btn-item {
+    color: #FFFFFF;
+    margin-top: 30px;
+    border-radius: 0;
+    float: left;
+    width: 100%;
+}
+
+.itemdetail-desktop .also-for-sale-icon {
+    position: absolute;
+}
+
+.itemdetail-desktop .also-for-sale svg {
+    position: relative;
+    margin: 0 0;
+    width: 25px;
+    height: 25px;
+    float: left;
+    top: -6px;
+}
+
+.itemdetail-desktop .also-for-sale h3 {
+    color: #141D26;
+    font-size: 14px;
+    text-align: left;
+    max-width: 100%;
+    font-weight: 400;
+    margin: 0 0;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.itemdetail-desktop .bullet-points {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.itemdetail-desktop .bullet-points hr {
+    width: 100%;
+    margin: 0 0;
+}
+
+.itemdetail-desktop .bullet-points right-arrow {
+    font-size: 16px;
+}
+
+.itemdetail-desktop .bullet-point {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.itemdetail-desktop .bullet-point-icon {
+}
+
+.itemdetail-desktop .bullet-point-icon svg {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 25px;
+    margin-left: 0px;
+}
+
+.itemdetail-desktop .right-arrow svg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 18px;
+    height: 18px;
+}
+
+.itemdetail-desktop .certified {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.itemdetail-desktop .certified-crown {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 40px;
+    width: 40px;
+    stroke: none;
+    fill: #ED4529;
+}
+
+.itemdetail-desktop .certified-text {
+    position: relative;
+    top: 0px;
+    left: 50px;
+    color: #141D26;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.itemdetail-desktop .btn-see-more {
+    background-color: #FFFFFF;
+    color: #536371;
+    font-size: inherit;
+    text-align: center;
+    border-width: 0px;
+    font-weight: 700;
+}

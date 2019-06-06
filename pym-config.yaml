@@ -6,7 +6,7 @@ docker_repo: peop
 docker_bucket: pym-config
 
 aws_user: bdl-backend-publish
-aws_keypair: aws-eb
+aws_keypair: aws-bdl
 aws_region: eu-central-1
 aws_instance_type: t2.micro
 aws_cert_arn: arn:aws:acm:eu-central-1:058475745091:certificate/d56bdb36-7e17-4534-90de-f4216c2aa9c6

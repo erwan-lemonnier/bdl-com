@@ -1,0 +1,128 @@
+<!-- MOBILE LAYOUT -->
+<div class="itemdetail-mobile">
+
+  <div class="col-lg-12 col-xs-12">
+	<h1>{{ item.title|safe }}</h1>
+
+    {% if cert_id %}
+    <div class="slider">
+      <ul id="lightSlider-{{ cert_id|safe }}-mobile" style="display:none">
+        {{ html_cert_images|safe }}
+      </ul>
+    </div>
+    {% else %}
+    <img src="{{ item.picture_url_w600|safe }}" class="itemdetail-picture" alt="{{ item.title|safe }}">
+    {% endif %}
+  </div>
+
+  <div class="col-lg-12 col-xs-12 itemdetail-left-block">
+
+    {% if cert_id %}
+
+    <div class="certified">
+      <div>
+        <svg class="certified-crown"><use xlink:href="#klue-crown"></use></svg>
+      </div>
+      <div>
+        <span class="certified-text">{{ label_bullet_certified|safe }}: {{ cert_price_min|safe }} - {{ cert_price_max|safe }} {{ cert_currency|safe }}</span>
+      </div>
+      <hr>
+    </div>
+
+    <h2><span class="cert-header">{{ CERT_ITEM_DESCRIPTION|safe }}:</span> {{ item_description|safe }}</h2>
+    {{ html_market_description|safe }}
+
+    {% else %}
+
+    {% if item.short_description == item.description %}
+    <h2 id="item-description-mobile" class="item-description">{{ item.description|safe }}</h2>
+    {% else %}
+    <h2 id="item-full-description-mobile" style="display: none">{{ item.description|safe }}</h2>
+    <h2 id="item-description-mobile" class="item-description">{{ item.short_description|safe }} <button onclick="click_see_more('{{ item.uid|safe }}', '{{ item.url|safe }}')" class="btn-see-more">{{ read_more_label|safe }}...</button></h2>
+    {% endif %}
+
+    {% endif %}
+
+    <div class="text-center">
+      {% if item.is_archived %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-sold no-highlight" onclick="false;">{{ label_sold_button|safe }}</button>
+      {% else %}
+
+      {% if item.source == 'facebook' %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      {% elif item.source == 'blocket' %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      {% elif item.source == 'tradera' %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      {% endif %}
+      {% endif %}
+    </div>
+
+    {% include 'market2/itemdetail-controls.html' %}
+
+  </div>
+
+  <div class="col-sm-12 col-xs-12 bullet-points">
+
+    {% if not cert_id %}
+    <div class="bullet-point">
+      <a href="{{ url_bullet_messenger|safe }}"
+         onclick="click_messenger_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_messenger|safe }}'); event.preventDefault();">
+        <div class="bullet-point-icon">
+          <svg class="icon-fbmessenger"><use xlink:href="#fbmessenger-icon"></use></svg>
+        </div>
+        <div>
+          <span>{{ label_bullet_messenger|safe }}</span>
+        </div>
+        <div class="right-arrow">
+          <svg><use xlink:href="#right-arrow"></use></svg>
+        </div>
+      </a>
+    </div>
+    <hr>
+    {% endif %}
+
+    <div class="bullet-point">
+      <a href="{{ url_bullet_sell|safe }}"
+         onclick="click_sell_info_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
+        <div class="bullet-point-icon">
+          <svg class="icon-plus"><use xlink:href="#plus-icon"></use></svg>
+        </div>
+        <div>
+          <span>{{ label_bullet_sell|safe }}</span>
+        </div>
+        <div class="right-arrow">
+          <svg><use xlink:href="#right-arrow"></use></svg>
+        </div>
+      </a>
+    </div>
+    <hr>
+    <div class="bullet-point">
+      <div class="bullet-point-icon">
+        <svg class="icon-heart"><use xlink:href="#heart-hollow-icon"></use></svg>
+      </div>
+      <div>
+        <span>{{ label_bullet_see_more|safe }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--
+  <div id="share-button-container">
+    <div class="share-buttons-div">
+      <div id="popup-a2a" class="a2a_kit a2a_kit_size_32 a2a_default_style share-buttons" data-a2a-url="{{ item.url|safe }}" data-a2a-title="{{ item.title|safe }}">
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_email"></a>
+        <a class="a2a_button_google_plus"></a>
+        <a class="a2a_dd" href="https://www.addtoany.com/share" rel="nofollow"></a>
+      </div>
+      <script>
+        var a2a_config = a2a_config || {};
+        a2a_config.icon_color = "#8997A1";
+      </script>
+    </div>
+  </div>
+-->

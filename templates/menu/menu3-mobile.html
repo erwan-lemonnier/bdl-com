@@ -1,0 +1,71 @@
+<div class="menu3-mobile">
+  <div class="menu3-mobile-top">
+    <div class="container">
+      <div class="row">
+        <div id="menu3-top" class="col-lg-12 col-sm-12 text-left">
+          <div class="icon-klue-div">
+            <svg class="icon-klue item-hover" onclick="return click_menu('KlueLogo', '{{ url_link_logo|safe }}');">
+              <use xlink:href="#klue-logo"></use>
+            </svg>
+          </div>
+
+          {% if not show_search_tray %}
+          <div id="icon-search-menu" class="">
+            <svg class="item-hover btn-icon-search-mobile no-highlight">
+              <use xlink:href="#search-glass"></use>
+            </svg>
+          </div>
+          {% endif %}
+
+          <div id="nav-icon3" class="item-hover">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div id="nav-tray" class="menu3-mobile-nav {% if show_nav_tray %}nav-tray-show{% else %}nav-tray-hide{% endif %}">
+    <div class="container">
+      <div class="row">
+        {% for d in menu_nav %}
+        <div class="col-lg-12 col-sm-12 text-left nav-item">
+          <div class="nav-link" href="{{ d.url|safe }}" onclick="return click_menu('{{ d.name|safe }}', '{{ d.url|safe }}');">
+            <span class="{% if d.active %}item-active{% else %}item-active{% endif %}">{{ d.label|safe }}</span>
+          </div>
+          <hr>
+        </div>
+        {% endfor %}
+        <div class="col-lg-12 col-sm-12 text-left">
+          <div class="nav-link">
+            <span class="">{{hreflinks|safe}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="bottom-hr">
+  </div>
+
+  <div id="search-tray" class="menu3-mobile-search {% if show_search_tray %}search-tray-show{% else %}search-tray-hide{% endif %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 text-left no-highlight">
+          <div class="input-group input-group-md input-div">
+            <input type="text" class="form-control input-lg no-highlight round-corners"
+                   id="input-query-mobile" name="input-query-mobile"
+                   placeholder="{{ label_search_placeholder|safe }}" {{ market_input_value_html|safe }}
+                   onsubmit="do_search('{{ language|safe }}');"
+                   autofocus>
+            <svg class="btn-icon-search-header" onclick="do_search('{{ language|safe }}');"><use xlink:href="#search-glass"></use></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

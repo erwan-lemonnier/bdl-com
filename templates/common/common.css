@@ -1,0 +1,83 @@
+
+/* Colors used:
+ *
+ * #ED4529    red
+ * #141D26    dark blue
+ * #536371    dark grey
+ * #8997A1    grey
+ * #E7E7E7    light grey
+ * #FFFFFF    white
+ * #4CB0DE    blue
+ * #E62833    red of klue crown
+ * #FF9900    yellow of like-heart icons
+ * #009CFD    light grey-green of expert-liked items
+ * #536371    search menu placeholder
+ * #F9F8F2    navtray background
+ *
+ */
+
+body, html {
+    background-color: #FFFFFF;
+    color: #141D26;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+}
+
+/* overflow-x: hidden makes webkit browsers on iphone
+ * very slugish. The line below fixes it.
+ * TODO: find the guilty div(s) and patch only them.
+ */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fluid {
+    position: relative;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.no-highlight, .no-highlight:focus, .no-highlight:visited, .no-highlight:active {
+    outline: none;
+    outline-style: none;
+    appearance:         none;
+    -webkit-appearance: none !important;
+    -moz-appearance:    none !important;
+}
+
+/*
+ * Toggle visibility on mobile/desktop
+ */
+
+.visible-desktop {
+    display: inherit;
+}
+
+.visible-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .visible-desktop {
+        display: none;
+    }
+
+    .visible-mobile {
+        display: inherit;
+    }
+}
+
+/* autocomplete tweaks */
+.ui-autocomplete {
+    z-index: 1000;
+}
+

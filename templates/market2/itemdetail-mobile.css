@@ -1,0 +1,136 @@
+.itemdetail-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .itemdetail-mobile {
+        display: block;
+    }
+}
+
+.itemdetail-mobile h1 {
+    margin: 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+
+.itemdetail-mobile .btn-see-more {
+    background-color: #FFFFFF;
+    color: #536371;
+    font-size: inherit;
+    text-align: center;
+    border-width: 0px;
+    font-weight: 700;
+}
+
+.itemdetail-mobile img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.itemdetail-mobile .itemdetail-picture {
+    padding-bottom: 15px;
+    max-width: 600px;
+}
+
+.itemdetail-mobile .item-description {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.itemdetail-mobile h2 {
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.itemdetail-mobile .btn-item {
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    float: none;
+    width: 100%;
+}
+
+.itemdetail-mobile .cert-h1 {
+    padding-top: 0px;
+}
+
+.itemdetail-mobile .cert-header {
+    color: #536371;
+    font-weight: 700;
+}
+
+.itemdetail-mobile .bullet-points {
+    margin-bottom: 0px;
+}
+
+.itemdetail-mobile .bullet-points hr {
+    width: 100%;
+    margin: 0 0;
+}
+
+.itemdetail-mobile .bullet-points right-arrow {
+    font-size: 16px;
+}
+
+.itemdetail-mobile .bullet-point {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.itemdetail-mobile .bullet-point-icon {
+}
+
+.itemdetail-mobile .bullet-point-icon svg {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.itemdetail-mobile .right-arrow svg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Certified label under slideshow */
+.itemdetail-mobile .certified {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.itemdetail-mobile .certified-crown {
+    position: absolute;
+    left: 8px;
+    top: 0px;
+    height: 50px;
+    width: 50px;
+    stroke: none;
+    fill: #ED4529;
+}
+
+.itemdetail-mobile .certified-text {
+    position: relative;
+    top: 0px;
+    left: 55px;
+    color: #536371;
+    font-size: 14px;
+    font-weight: 700;
+}
+

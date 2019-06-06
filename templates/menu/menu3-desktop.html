@@ -1,0 +1,31 @@
+<div id="menu-desktop" class="menu3-desktop">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-left">
+        <div class="icon-klue-div">
+          <svg class="icon-klue item-hover" onclick="return click_menu('KlueLogo', '{{ url_link_logo|safe }}');">
+            <use xlink:href="#klue-logo"></use>
+          </svg>
+        </div>
+        <div class="input-group input-group-sm search-input-div no-highlight">
+          <input type="text" class="form-control search-input no-highlight"
+                 id="input-query-desktop" name="input-query-desktop"
+                 placeholder="{{ label_search_placeholder|safe }}" {{ market_input_value_html|safe }}
+                 onKeyDown="if(event.keyCode==13) do_search('{{ language|safe }}');" autofocus>
+          <span class="input-group-btn no-highlight">
+            <button class="btn btn-default btn-lg btn-search btn-search-desktop no-highlight item-hover"
+                    type="submit" onclick="do_search('{{ language|safe }}')">
+              <svg class="btn-icon-glass"><use xlink:href="#search-glass-thin"></use></svg>
+            </button>
+          </span>
+        </div>
+
+        <div class="btn-height">
+          <a href="{{ url_link_sell|safe }}" class="button btn btn-default btn-sell no-highlight"
+             onclick="return click_menu('KlueSell', '{{ url_link_sell|safe }}');">{{ label_link_sell|safe }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="bottom-hr">
+</div>

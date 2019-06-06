@@ -1,0 +1,164 @@
+{
+  "LANG_EN": {
+    "en": "English",
+    "sv": "Engelska"
+  },
+  "LANG_SV": {
+    "en": "Swedish",
+    "sv": "Svenska"
+  },
+
+  "COUNTRY_SE": {
+    "en": "Sweden",
+    "sv": "Sverige"
+  },
+
+
+  "MARKET_PAGE_TITLE": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_HEADER_LINE1": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_HEADER_LINE2": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_PAGE_DESCRIPTION": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_SEARCH_BUTTON_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_SEARCH_PLACEHOLDER": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_LABEL_END_REACHED": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_NO_HITS": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_LIKE_EXPLAINED": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_LABEL_PRICE": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_LABEL_DATE": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_LABEL_IN_LOCATION": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_SEARCH_PLACEHOLDER": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_CROWN_EXPLAINED": {
+    "en": "",
+    "sv": ""
+  },
+  "MARKET_BUTTON_EXPLAINED": {
+    "en": "",
+    "sv": ""
+  },
+
+
+  "FOOTER_LABEL_ABOUT": {
+    "en": "",
+    "sv": ""
+  },
+  "FOOTER_LIKE_EXPLAINED": {
+    "en": "",
+    "sv": ""
+  },
+  "FOOTER_CROWN_EXPLAINED": {
+    "en": "",
+    "sv": ""
+  },
+
+  "URL_FORSALE_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "URL_MARKET_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "URL_SELL_PAGE_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+
+
+  "MENU2_FREE_APPRAISAL_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_SELL_SOMETHING": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_LABEL_ABOUT": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_APPRAISAL_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_CERTIFICATE_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_PRICEDB": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_PRICEDB_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU2_SELL_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU3_SELL_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU3_PRICEDB_LABEL": {
+    "en": "",
+    "sv": ""
+  },
+  "MENU3_PRICEDB": {
+    "en": "",
+    "sv": ""
+  },
+
+  "CATEGORY_FASHION": {
+    "en": "Fashion",
+    "sv": "Mode"
+  },
+  "CATEGORY_DESIGN": {
+    "en": "Design",
+    "sv": "Design"
+  },
+  "CATEGORY_ANTICS": {
+    "en": "Antics",
+    "sv": "Antik"
+  }
+
+}

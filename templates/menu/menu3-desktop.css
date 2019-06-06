@@ -1,0 +1,193 @@
+/*
+ * Desktop top menu
+ */
+
+.menu3-desktop {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF;
+    z-index: 130;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 14px;
+    min-height: 55px;
+    max-height: 55px;
+}
+
+.menu3-desktop .bottom-hr {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 0;
+}
+
+.menu3-desktop .icon-klue-div {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    height: 30px;
+    z-index: 120;
+}
+
+@media screen and (min-width: 768px) {
+    .menu3 .container, .menu3 .row {
+        height: 42px;
+    }
+}
+
+.menu3-desktop .item-hover {
+    pointer-events: auto;
+}
+
+.menu3-desktop .item-hover:hover, .menu3-desktop .item-hover:active {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.menu3-desktop .sell-smtg {
+    text-decoration: none;
+    position: absolute;
+    top: 17px;
+    right: 200px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.menu3-desktop .sell-smtg:hover,
+.menu3-desktop .sell-smtg:active {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.menu3-desktop .btn-height {
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+.menu3-desktop .btn-sell {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-decoration: none;
+    color: initial;
+    border-radius: 4px;
+    border-color: #8997A1;
+    border-width: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.menu3-desktop .icon-klue {
+    pointer-events: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+    width: 75px;
+    z-index: 120;
+}
+
+.menu3-desktop .search-input {
+    border: 0px solid #E7E7E7;
+    border-radius: 4px;
+    outline: none;
+    background: #F3F4F4;
+    padding: 0px 10px;
+    z-index: 2;
+    font-family: inherit;
+    font-size: 16px;
+    box-shadow: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+.menu3-desktop input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #536371;
+}
+.menu3-desktop input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #536371;
+    opacity:  1;
+}
+.menu3-desktop input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #536371;
+    opacity:  1;
+}
+.menu3-desktop input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #536371;
+}
+.menu3-desktop input::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #536371;
+}
+
+
+.menu3-desktop .input-group-btn {
+    height: 30px;
+}
+
+.menu3-desktop .btn-search {
+    width: 40px;
+    background-color: #F3F4F4;
+    text-decoration: none;
+    border: 0px solid #F3F4F4;
+    color: #F3F4F4;
+    border-radius: 4px;
+}
+
+.menu3-desktop .btn-search-desktop {
+    display: block;
+    margin-right: 0px;
+}
+
+.menu3-desktop .input-group-sm>.input-group-btn>.btn {
+    height: 26px;
+    width: 50px;
+}
+
+.menu3-desktop .btn-icon-glass {
+    position: absolute;
+    top: 4px;
+    left: 22px;
+    width: 20px;
+    height: 20px;
+    fill: #141D26;
+    z-index: 130;
+    pointer-events: none;
+}
+
+.menu3-desktop .search-input-div {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    max-width: 300px;
+    padding-bottom: 28px;
+    background: #F3F4F4;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    padding: 0 0;
+    max-height: 32px;
+}
+
+@media screen and (min-width: 1000px) {
+    .menu3-desktop .search-input-div {
+        left: 120px;
+    }
+}
+
+.menu3-browse-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 767px) {
+    .menu3-browse-desktop {
+        display: block;
+        height: 50px;
+        max-height: 50px;
+    }
+}
