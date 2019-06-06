@@ -593,11 +593,11 @@ def do_get_item_forsale_html(id, lang=None):
 
     if is_error(item):
         report_error("Failed to retrieve item %s" % id, caught=item)
-        res = ApiPool.market.model.ItemHtml(
+        res = ApiPool.www.model.ItemHtml(
             html=''
         )
     else:
-        res = ApiPool.market.model.ItemHtml(
+        res = ApiPool.www.model.ItemHtml(
             html=item_forsale_to_html(item, language, is_popup=True),
         )
 
