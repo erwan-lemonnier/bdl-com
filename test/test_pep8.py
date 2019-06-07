@@ -25,7 +25,7 @@ def check(files):
     # E303: Too many blank lines
     # E402: Allow code before imports
     # E731: do not assign a lambda expression, use a def
-    args = ["pycodestyle", "--ignore", "W606,E305,E741,E501,E303,E302,E402,E731"] + list(files)
+    args = ["pycodestyle", "--ignore", "W605,W606,E305,E741,E501,E303,E302,E402,E731"] + list(files)
     p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     (out, err) = p.communicate()
     if len(out) != 0:
