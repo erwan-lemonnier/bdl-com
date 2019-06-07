@@ -21,6 +21,8 @@ jwt_audience: BDL_JWT_AUDIENCE
 
 live_host: bazardelux.com
 
+google_maps_api_key: AIzaSyDOh1aU1nXHGmxoTaO6B58Nys1TIDrRFiY
+
 with_async: true
 
 env_secrets:

@@ -52,6 +52,10 @@
     "en": "",
     "sv": ""
   },
+  "MARKET_LABEL_SEE_MORE": {
+    "en": "SEE MORE",
+    "sv": "LÄS MER"
+  },
   "MARKET_NO_HITS": {
     "en": "",
     "sv": ""
@@ -65,12 +69,12 @@
     "sv": ""
   },
   "MARKET_LABEL_DATE": {
-    "en": "",
-    "sv": ""
+    "en": "Published",
+    "sv": "Publicerad"
   },
   "MARKET_LABEL_IN_LOCATION": {
-    "en": "",
-    "sv": ""
+    "en": "in",
+    "sv": "i"
   },
   "MARKET_SEARCH_PLACEHOLDER": {
     "en": "",
@@ -84,7 +88,30 @@
     "en": "",
     "sv": ""
   },
-
+  "MARKET_BULLET_SELL": {
+    "en": "Sell on Bazardelux",
+    "sv": "Sälj något på Bazardelux"
+  },
+  "MARKET_BULLET_SEE_MORE": {
+    "en": "More things of interest:",
+    "sv": "Andra föremål av intresse:",
+    "fr": "Autres objets dignes d'intérêt:"
+  },
+  "MARKET_LABEL_ON_FACEBOOK": {
+    "en": "on Facebook",
+    "sv": "på Facebook",
+    "fr": "sur Facebook"
+  },
+  "MARKET_LABEL_ON_BLOCKET": {
+    "en": "on Blocket",
+    "sv": "på Blocket",
+    "fr": "sur Blocket"
+  },
+  "MARKET_LABEL_ON_TRADERA": {
+    "en": "on Tradera",
+    "sv": "på Tradera",
+    "fr": "sur Tradera"
+  },
 
   "FOOTER_LABEL_ABOUT": {
     "en": "",
@@ -100,8 +127,9 @@
   },
 
   "URL_FORSALE_LABEL": {
-    "en": "",
-    "sv": ""
+    "en": "forsale",
+    "sv": "tillsalu",
+    "fr": "avendre"
   },
   "URL_MARKET_LABEL": {
     "en": "",
@@ -169,6 +197,143 @@
   "CATEGORY_ANTICS": {
     "en": "Antics",
     "sv": "Antik"
-  }
+  },
+  "CATEGORY_GLASSES": {
+    "en": "Glasses",
+    "sv": "Glassögon",
+    "fr": "Lunettes"
+  },
+  "CATEGORY_CLOTHES": {
+    "en": "Clothes",
+    "sv": "Kläder",
+    "fr": "Vêtements"
+  },
+  "CATEGORY_SHOES": {
+    "en": "Shoes",
+    "sv": "Skor",
+    "fr": "Chaussures"
+  },
+  "CATEGORY_MODE": {
+    "en": "Fashion",
+    "sv": "Mode",
+    "fr": "Mode"
+  },
+  "CATEGORY_WATCHES": {
+    "en": "Watches",
+    "sv": "Klockor",
+    "fr": "Montres"
+  },
+  "CATEGORY_EMPIRE": {
+    "en": "Empire"
+  },
+  "CATEGORY_BAGS": {
+    "en": "Bags",
+    "sv": "Väskor",
+    "fr": "Sacs à main"
+  },
 
+  "CATEGORY_PIETHEIN": {"en": "Piet Hein"},
+  "CATEGORY_MULBERRY": {"en": "Mulberry"},
+  "CATEGORY_GRYTHYTTAN": {"en": "Grythyttan"},
+  "CATEGORY_POULHENNINGSEN": {"en": "Poul Henningsen"},
+  "CATEGORY_BORGELINDAU": {"en": "Börge Lindau"},
+  "CATEGORY_ARNEJACOBSEN": {"en": "Arne Jacobsen"},
+  "CATEGORY_JEWELS": {"en": "Jewels"},
+  "CATEGORY_GUSTAVIAN": {"en": "Gustavian"},
+  "CATEGORY_ISAMUNOGUCHI": {"en": "Isamu Noguchi"},
+  "CATEGORY_ARMANI": {"en": "Armani"},
+  "CATEGORY_EVAMORIZ": {"en": "Eva Moriz"},
+  "CATEGORY_KALLEMO": {"en": "Kallemo"},
+  "CATEGORY_ASPLUND": {"en": "Asplund"},
+  "CATEGORY_BALENCIAGA": {"en": "Balenciaga"},
+  "CATEGORY_GIVENCHY": {"en": "Givenchy"},
+  "CATEGORY_HANSWEGNER": {"en": "Hans Wegner"},
+  "CATEGORY_ANDERSPEHRSON": {"en": "Anders Pehrson"},
+  "CATEGORY_SVENSKTTENN": {"en": "Svenskt Tenn"},
+  "CATEGORY_LAMMHULTS": {"en": "Lammhults"},
+  "CATEGORY_BURBERRY": {"en": "Burberry"},
+  "CATEGORY_FENDI": {"en": "Fendi"},
+  "CATEGORY_LONGCHAMP": {"en": "Longchamp"},
+  "CATEGORY_KAYBOJESEN": {"en": "Kay Bojesen"},
+  "CATEGORY_KARINMOBRING": {"en": "Karin Mobring"},
+  "CATEGORY_BRUNOMATHSSON": {"en": "Bruno Mathsson"},
+  "CATEGORY_SONIARYKIEL": {"en": "Sonia Rykiel"},
+  "CATEGORY_MOREAU": {"en": "Moreau"},
+  "CATEGORY_CHANEL": {"en": "Chanel"},
+  "CATEGORY_HOGAN": {"en": "Hogan"},
+  "CATEGORY_CHRISTIANDIOR": {"en": "Christian Dior"},
+  "CATEGORY_LANVIN": {"en": "Lanvin"},
+  "CATEGORY_ACNE": {"en": "ACNE"},
+  "CATEGORY_VERNONPANTON": {"en": "Vernon Panton"},
+  "CATEGORY_PHILIPPESTARCK": {"en": "Philippe Starck"},
+  "CATEGORY_MIUMIU": {"en": "Miu Miu"},
+  "CATEGORY_NANNADITZEL": {"en": "Nanna Ditzel"},
+  "CATEGORY_FLOS": {"en": "Flos"},
+  "CATEGORY_LIGNEROSET": {"en": "Ligne Roset"},
+  "CATEGORY_MICHAELKORS": {"en": "Michael Kors"},
+  "CATEGORY_THONET": {"en": "Thonet"},
+  "CATEGORY_HERMES": {"en": "Hermes"},
+  "CATEGORY_LOUBOUTIN": {"en": "Louboutin"},
+  "CATEGORY_CORBUSIER": {"en": "Corbusier"},
+  "CATEGORY_VALENTINO": {"en": "Valentino"},
+  "CATEGORY_HANNAWERNING": {"en": "Hanna Werning"},
+  "CATEGORY_PATRICIAURQUIOLA": {"en": "Patrcia Urquiola"},
+  "CATEGORY_MOSCHINO": {"en": "Moschino"},
+  "CATEGORY_ROCOCO": {"en": "Rococo"},
+  "CATEGORY_STIGLINDBERG": {"en": "Stig Lindberg"},
+  "CATEGORY_MARIANNEWESTMAN": {"en": "Marianne Westman"},
+  "CATEGORY_LISALARSSON": {"en": "Lisa Larsson"},
+  "CATEGORY_FRITZHANSEN": {"en": "Fritz Hansen"},
+  "CATEGORY_EEROAARNIO": {"en": "Eero Aarnio"},
+  "CATEGORY_LUXUS": {"en": "Luxus"},
+  "CATEGORY_ALVARAALTO": {"en": "Alvar Aalto"},
+  "CATEGORY_MOOOI": {"en": "Moooi"},
+  "CATEGORY_YSL": {"en": "Yves Saint Laurent"},
+  "CATEGORY_POULKJAERHOLM": {"en": "Poul Kjaerholm"},
+  "CATEGORY_EAMES": {"en": "Eanes"},
+  "CATEGORY_MUUTO": {"en": "Muuto"},
+  "CATEGORY_TOMDIXON": {"en": "Tom Dixon"},
+  "CATEGORY_CASTIGLIONI": {"en": "Castiglioni"},
+  "CATEGORY_GUCCI": {"en": "Gucci"},
+  "CATEGORY_GOYARD": {"en": "Goyard"},
+  "CATEGORY_BENIOURAIN": {"en": "Beni Ourain"},
+  "CATEGORY_STRINNING": {"en": "Strinning"},
+  "CATEGORY_ARNENORELL": {"en": "Arne Norell"},
+  "CATEGORY_BENGTRUDA": {"en": "Bengt Ruda"},
+  "CATEGORY_LEKLINT": {"en": "Le Klint"},
+  "CATEGORY_LOEWE": {"en": "Loewe"},
+  "CATEGORY_ESCADA": {"en": "Escada"},
+  "CATEGORY_SKULTUNA": {"en": "Skultuna"},
+  "CATEGORY_GEORGJENSEN": {"en": "Georg Jensen"},
+  "CATEGORY_GINOSARFATTI": {"en": "Gino Sarfatti"},
+  "CATEGORY_CARLMALMSTEN": {"en": "Carl Malmsten"},
+  "CATEGORY_SWEDESE": {"en": "Swedese"},
+  "CATEGORY_POULCHRISTENSEN": {"en": "Poul Christensen"},
+  "CATEGORY_BOLINDER": {"en": "Bolinder"},
+  "CATEGORY_VERNERPANTON": {"en": "Verner Panton"},
+  "CATEGORY_MISSONI": {"en": "Missoni"},
+  "CATEGORY_YNGVEEKSTROM": {"en": "Yngve Ekström"},
+  "CATEGORY_CLAESSONKOIVISTORUNE": {"en": "Claesson Koivisto Rune"},
+  "CATEGORY_MIESVANDERROHE": {"en": "Mies Van Det Rohe"},
+  "CATEGORY_MATSTHESELIUS": {"en": "Mats Theselius"},
+  "CATEGORY_MARCJACOBS": {"en": "Marc Jacobs"},
+  "CATEGORY_KAAREKLINT": {"en": "Kaare Klint"},
+  "CATEGORY_JONASBOHLIN": {"en": "Jonas Bohlin"},
+  "CATEGORY_JOSEFFRANK": {"en": "Josef Frank"},
+  "CATEGORY_NINARICCI": {"en": "Nina Ricci"},
+  "CATEGORY_GUSTAVSBERG": {"en": "Gustavsberg"},
+  "CATEGORY_KARLERIKEKSELIUS": {"en": "Karl Erik Ekselius"},
+  "CATEGORY_THOMASSANDELL": {"en": "Thomas Sandell"},
+  "CATEGORY_JUGEND": {"en": "Jugend"},
+  "CATEGORY_MAGIS": {"en": "Magis"},
+  "CATEGORY_RORSTRAND": {"en": "Rörstrand"},
+  "CATEGORY_LOUISVUITTONSPEEDY": {"en": "Speedy"},
+  "CATEGORY_INTRECCIATO": {"en": "Intrecciato"},
+  "CATEGORY_GUBI": {"en": "Gubi"},
+  "CATEGORY_HAY": {"en": "Hay"},
+  "CATEGORY_PRADA": {"en": "Prada"},
+  "CATEGORY_ESTRIDERICSON": {"en": "Estrid Ericson"},
+  "CATEGORY_LOUISVUITTON": {"en": "Louis Vuitton"},
+  "CATEGORY_BORGEMOGENSEN": {"en": "Borge Mogensen"},
+  "CATEGORY_DIOR": {"en": "Dior"}
 }

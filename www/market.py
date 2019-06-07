@@ -98,22 +98,20 @@ def item_forsale_to_html(item, language, is_popup=True):
 
     normalize_item_for_sale(item, language=language)
 
-    item.description = re.sub('<[bB][rR]>', ' ', item.description)
-    item.short_description = item.description[0:180]
+    item.bdlitem.description = re.sub('<[bB][rR]>', ' ', item.bdlitem.description)
+    item.bdlitem.short_description = item.bdlitem.description[0:180]
 
     #
     # A copied p2p announce
     #
 
-    email_body = '%s\n%s' % (item.description, item.url)
+    email_body = '%s\n%s' % (item.bdlitem.description, item.url)
     email_body = email_body.replace('\n', '\\n')
 
     # Else, default to showing non-certificate item popup
     location = translate('COUNTRY_%s' % item.bdlitem.country.upper(), language)
-    if item.facebook_location:
-        location = item.facebook_location
-    if item.blocket_location:
-        location = item.blocket_location
+    if item.bdlitem.location:
+        location = item.bdlitem.location
 
     item_location_query = urlencode({'q': unicode_to_html(location.replace(',', ''))})
 
@@ -123,19 +121,19 @@ def item_forsale_to_html(item, language, is_popup=True):
     # Format buy button label
     #
 
-    cur = item.currency.lower()
+    cur = item.bdlitem.currency.lower()
     src = ''
     log.info("ITEM IS %s" % item)
     if cur == 'sek':
         cur = 'kr'
-    if item.source == 'facebook':
+    if item.source == 'FACEBOOK':
         src = unicode_to_html(translate('MARKET_LABEL_ON_FACEBOOK', language))
-    elif item.source == 'blocket':
+    elif item.source == 'BLOCKET':
         src = unicode_to_html(translate('MARKET_LABEL_ON_BLOCKET', language))
-    elif item.source == 'tradera':
+    elif item.source == 'TRADERA':
         src = unicode_to_html(translate('MARKET_LABEL_ON_TRADERA', language))
 
-    label_buy_button = '%s %s %s' % (item.price, cur, src)
+    label_buy_button = '%s %s %s' % (item.bdlitem.price, cur, src)
 
     # Set the item.source_details, used for analytics purpose. More specific than .source
     item.source_details = item.source
@@ -144,30 +142,23 @@ def item_forsale_to_html(item, language, is_popup=True):
 
     itemdata = {
         'is_popup': is_popup,
-        'cert_id': cert_id,
         'item': item,
         'language': language,
-        'label_not_reviewed': unicode_to_html(translate('MARKET_LABEL_NOT_EXPERT_REVIEWED', language), keep_html=True),
-        'label_is_certified': unicode_to_html(translate('MARKET_LABEL_IS_CERTIFIED', language), keep_html=True),
-        'label_is_reviewed': unicode_to_html(translate('MARKET_LABEL_IS_EXPERT_REVIEWED', language), keep_html=True),
         'label_date': unicode_to_html(translate('MARKET_LABEL_DATE', language)),
         'label_in_location': unicode_to_html(translate('MARKET_LABEL_IN_LOCATION', language)),
-        'label_expert_only': unicode_to_html(translate('MARKET_EXPERT_ONLY', language)),
         'item_location': unicode_to_html(location),
+        'item_date_created': str(item.date_created)[0:12],
         'label_buy_button': label_buy_button,
         'label_sold_button': unicode_to_html(translate('MARKET_LABEL_ITEM_SOLD', language)),
         'google_maps_api_key': get_config().google_maps_api_key,
         'item_location_query': item_location_query,
-        'a2a_title': item.title,
+        'a2a_title': item.bdlitem.title,
         'a2a_url': item.url,
         'a2a_email_body': email_body,
         'label_how_klue_works': unicode_to_html(translate('MARKET_LABEL_HOW_KLUE_WORKS', language)),
-        'user_id': get_userid(),
-        'show_expert_controls': expert_controls,
-        'read_more_label': unicode_to_html(translate('MARKET_LABEL_SEE_MORE', language), keep_html=True),
+        'label_read_more': unicode_to_html(translate('MARKET_LABEL_SEE_MORE', language), keep_html=True),
         'label_also_for_sale': unicode_to_html(translate('MARKET_ALSO_FOR_SALE', language)),
 
-        'label_bullet_messenger': unicode_to_html(translate('MARKET_BULLET_MESSENGER', language)),
         'label_bullet_sell': unicode_to_html(translate('MARKET_BULLET_SELL', language)),
         'label_bullet_see_more': unicode_to_html(translate('MARKET_BULLET_SEE_MORE', language), keep_html=True),
         'url_bullet_messenger': '%s/messenger' % get_base_url(language),
@@ -346,7 +337,6 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
 
     html_results = ''
     item_html = ''
-    item_is_cert = False
     show_header = True
 
     hreflangs = []
@@ -374,17 +364,14 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
         canonical_url = gen_item_forsale_url(item, item_language)
         localized_url = gen_item_forsale_url(item, language)
 
-        if item.cert_id:
-            item_is_cert = True
-
         og_url = localized_url
-        og_title = '%s | Klue Market' % item.title
+        og_title = '%s | Klue Market' % item.bdlitem.title
 
-        og_description = item.description
+        og_description = item.bdlitem.description
         og_description = re.sub('<[bB][rR]>', ' ', og_description)
         meta_description = og_description
-        og_image = item.picture_url_w600
-        html_page_title = '%s - %s %s | Klue Market' % (item.title, item.price, item.currency)
+        og_image = item.bdlitem.picture_url_w600
+        html_page_title = '%s - %s %s | Klue Market' % (item.bdlitem.title, item.bdlitem.price, item.bdlitem.currency)
         show_header = False
 
         def patch_url(l):
@@ -449,7 +436,6 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
         'market2/market.html',
         url_next_page=url_next_page,
         item_html=item_html,
-        item_is_cert=item_is_cert,
         show_header=show_header,
         canonical_url=canonical_url,
         query_url=search_url,

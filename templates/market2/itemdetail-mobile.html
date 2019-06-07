@@ -2,58 +2,31 @@
 <div class="itemdetail-mobile">
 
   <div class="col-lg-12 col-xs-12">
-	<h1>{{ item.title|safe }}</h1>
+	<h1>{{ item.bdlitem.title|safe }}</h1>
 
-    {% if cert_id %}
-    <div class="slider">
-      <ul id="lightSlider-{{ cert_id|safe }}-mobile" style="display:none">
-        {{ html_cert_images|safe }}
-      </ul>
-    </div>
-    {% else %}
-    <img src="{{ item.picture_url_w600|safe }}" class="itemdetail-picture" alt="{{ item.title|safe }}">
-    {% endif %}
+    <img src="{{ item.bdlitem.picture_url_w600|safe }}" class="itemdetail-picture" alt="{{ item.bdlitem.title|safe }}">
   </div>
 
   <div class="col-lg-12 col-xs-12 itemdetail-left-block">
 
-    {% if cert_id %}
-
-    <div class="certified">
-      <div>
-        <svg class="certified-crown"><use xlink:href="#klue-crown"></use></svg>
-      </div>
-      <div>
-        <span class="certified-text">{{ label_bullet_certified|safe }}: {{ cert_price_min|safe }} - {{ cert_price_max|safe }} {{ cert_currency|safe }}</span>
-      </div>
-      <hr>
-    </div>
-
-    <h2><span class="cert-header">{{ CERT_ITEM_DESCRIPTION|safe }}:</span> {{ item_description|safe }}</h2>
-    {{ html_market_description|safe }}
-
+    {% if item.bdlitem.short_description == item.bdlitem.description %}
+    <h2 id="item-description-mobile" class="item-description">{{ item.bdlitem.description|safe }}</h2>
     {% else %}
-
-    {% if item.short_description == item.description %}
-    <h2 id="item-description-mobile" class="item-description">{{ item.description|safe }}</h2>
-    {% else %}
-    <h2 id="item-full-description-mobile" style="display: none">{{ item.description|safe }}</h2>
-    <h2 id="item-description-mobile" class="item-description">{{ item.short_description|safe }} <button onclick="click_see_more('{{ item.uid|safe }}', '{{ item.url|safe }}')" class="btn-see-more">{{ read_more_label|safe }}...</button></h2>
-    {% endif %}
-
+    <h2 id="item-full-description-mobile" style="display: none">{{ item.bdlitem.description|safe }}</h2>
+    <h2 id="item-description-mobile" class="item-description">{{ item.bdlitem.short_description|safe }} <button onclick="click_see_more('{{ item.item_id|safe }}', '{{ item.url|safe }}')" class="btn-see-more">{{ read_more_label|safe }}...</button></h2>
     {% endif %}
 
     <div class="text-center">
-      {% if item.is_archived %}
+      {% if item.bdlitem.has_ended %}
       <button type="button" class="btn-item btn btn-primary btn-lg btn-sold no-highlight" onclick="false;">{{ label_sold_button|safe }}</button>
       {% else %}
 
-      {% if item.source == 'facebook' %}
-      <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
-      {% elif item.source == 'blocket' %}
-      <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
-      {% elif item.source == 'tradera' %}
-      <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      {% if item.source == 'FACEBOOK' %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      {% elif item.source == 'BLOCKET' %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      {% elif item.source == 'TRADERA' %}
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
       {% endif %}
       {% endif %}
     </div>
@@ -63,28 +36,9 @@
   </div>
 
   <div class="col-sm-12 col-xs-12 bullet-points">
-
-    {% if not cert_id %}
-    <div class="bullet-point">
-      <a href="{{ url_bullet_messenger|safe }}"
-         onclick="click_messenger_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_messenger|safe }}'); event.preventDefault();">
-        <div class="bullet-point-icon">
-          <svg class="icon-fbmessenger"><use xlink:href="#fbmessenger-icon"></use></svg>
-        </div>
-        <div>
-          <span>{{ label_bullet_messenger|safe }}</span>
-        </div>
-        <div class="right-arrow">
-          <svg><use xlink:href="#right-arrow"></use></svg>
-        </div>
-      </a>
-    </div>
-    <hr>
-    {% endif %}
-
     <div class="bullet-point">
       <a href="{{ url_bullet_sell|safe }}"
-         onclick="click_sell_info_button('{{ item.uid|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
+         onclick="click_sell_info_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
         <div class="bullet-point-icon">
           <svg class="icon-plus"><use xlink:href="#plus-icon"></use></svg>
         </div>
