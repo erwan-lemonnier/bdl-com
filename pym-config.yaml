@@ -15,7 +15,7 @@ aws_default_region: eu-central-1
 aws_access_key_id: AWS_BDL_ACCESS_KEY_ID
 aws_secret_access_key: AWS_BDL_SECRET_ACCESS_KEY
 
-jwt_issuer: BDL_JWT_ISSUER
+jwt_issuer: api.bazardelux.com
 jwt_secret: BDL_JWT_SECRET
 jwt_audience: BDL_JWT_AUDIENCE
 
@@ -28,7 +28,6 @@ with_async: true
 env_secrets:
   - BDL_JWT_SECRET
   - BDL_JWT_AUDIENCE
-  - BDL_JWT_ISSUER
   - AWS_BDL_SECRET_ACCESS_KEY
   - AWS_BDL_ACCESS_KEY_ID
 
