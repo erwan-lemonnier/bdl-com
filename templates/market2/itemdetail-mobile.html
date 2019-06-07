@@ -22,11 +22,11 @@
       {% else %}
 
       {% if item.source == 'FACEBOOK' %}
-      <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
       {% elif item.source == 'BLOCKET' %}
-      <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
       {% elif item.source == 'TRADERA' %}
-      <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+      <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
       {% endif %}
       {% endif %}
     </div>
@@ -38,7 +38,7 @@
   <div class="col-sm-12 col-xs-12 bullet-points">
     <div class="bullet-point">
       <a href="{{ url_bullet_sell|safe }}"
-         onclick="click_sell_info_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
+         onclick="click_sell_info_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
         <div class="bullet-point-icon">
           <svg class="icon-plus"><use xlink:href="#plus-icon"></use></svg>
         </div>

@@ -6,15 +6,7 @@
   {% else %}
   <div class="col-lg-4 col-sm-5 col-xs-12">
   {% endif %}
-    {% if cert_id %}
-    <div class="slider">
-      <ul id="lightSlider-{{ cert_id|safe }}-desktop" style="display:none">
-        {{ html_cert_images|safe }}
-      </ul>
-    </div>
-    {% else %}
     <img src="{{ item.bdlitem.picture_url_w600|safe }}" class="itemdetail-picture" alt="{{ item.bdlitem.title|safe }}">
-    {% endif %}
   </div>
   {% if is_popup %}
   <div class="col-lg-5 col-md-4 col-xs-12 itemdetail-left-block">
@@ -48,11 +40,11 @@
           <button type="button" class="btn-item btn btn-primary btn-lg btn-sold no-highlight" onclick="false;">{{ label_sold_button|safe }}</button>
           {% else %}
           {% if item.source == 'FACEBOOK' %}
-          <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+          <button type="button" class="btn-item btn btn-primary btn-lg btn-facebook no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
           {% elif item.source == 'BLOCKET' %}
-          <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+          <button type="button" class="btn-item btn btn-primary btn-lg btn-blocket no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
           {% elif item.source == 'TRADERA' %}
-          <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
+          <button type="button" class="btn-item btn btn-primary btn-lg btn-tradera no-highlight" onclick="click_buy_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}')">{{ label_buy_button|safe }}</button>
           {% endif %}
           {% endif %}
         </div>
@@ -68,7 +60,7 @@
 
         <div class="bullet-point">
           <a href="{{ url_bullet_sell|safe }}"
-             onclick="click_sell_info_button('{{ item.item_id|safe }}', '{{ item.origin_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
+             onclick="click_sell_info_button('{{ item.item_id|safe }}', '{{ item.native_url|safe }}', '{{ item.source|safe }}', '{{ item.source_details|safe }}', '{{ url_bullet_sell|safe }}')">
             <div class="bullet-point-icon">
               <svg class="icon-plus"><use xlink:href="#plus-icon"></use></svg>
             </div>
