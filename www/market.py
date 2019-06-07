@@ -155,7 +155,6 @@ def item_forsale_to_html(item, language, is_popup=True):
         'a2a_title': item.bdlitem.title,
         'a2a_url': item.url,
         'a2a_email_body': email_body,
-        'label_how_klue_works': unicode_to_html(translate('MARKET_LABEL_HOW_KLUE_WORKS', language)),
         'label_read_more': unicode_to_html(translate('MARKET_LABEL_SEE_MORE', language), keep_html=True),
         'label_also_for_sale': unicode_to_html(translate('MARKET_ALSO_FOR_SALE', language)),
 

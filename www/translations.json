@@ -17,28 +17,49 @@
 
   "COUNTRY_SE": {
     "en": "Sweden",
-    "sv": "Sverige"
+    "sv": "Sverige",
+    "fr": "Suède"
+  },
+  "COUNTRY_NO": {
+    "en": "Norway",
+    "sv": "Norge",
+    "fr": "Norvège"
+  },
+  "COUNTRY_FI": {
+    "en": "Finland",
+    "sv": "Finland",
+    "fr": "Finlande"
+  },
+  "COUNTRY_DK": {
+    "en": "Denmark",
+    "sv": "Danmark",
+    "fr": "Danemark"
   },
   "COUNTRY_FR": {
     "en": "France",
-    "sv": "Frankrike"
+    "sv": "Frankrike",
+    "fr": "France"
+  },
+  "COUNTRY_DE": {
+    "en": "Germany",
+    "sv": "Tyskland",
+    "sv": "Allemagne"
+  },
+  "COUNTRY_GB": {
+    "en": "England",
+    "sv": "England",
+    "sv": "Angleterre"
   },
 
-  "MARKET_PAGE_TITLE": {
-    "en": "",
-    "sv": ""
-  },
   "MARKET_HEADER_LINE1": {
-    "en": "",
-    "sv": ""
+    "en": "Handpicked from private sales all over Europe",
+    "sv": "Handplockade från privata försäljningar över hela Europa",
+    "fr": "La crème des ventes de particulier à particulier dans toute l'Europe"
   },
   "MARKET_HEADER_LINE2": {
-    "en": "",
-    "sv": ""
-  },
-  "MARKET_PAGE_DESCRIPTION": {
-    "en": "",
-    "sv": ""
+    "en": "Our smart AI select the finest things for sale right now",
+    "sv": "Våra smarta AI väljer ut det bästa till salu just nu",
+    "fr": "Notre AI choisie les plus belles choses en vente aujourd'hui"
   },
   "MARKET_SEARCH_BUTTON_LABEL": {
     "en": "",
@@ -54,23 +75,21 @@
   },
   "MARKET_LABEL_SEE_MORE": {
     "en": "SEE MORE",
-    "sv": "LÄS MER"
+    "sv": "LÄS MER",
+    "fr": "VOIR D'AVANTAGE"
   },
   "MARKET_NO_HITS": {
-    "en": "",
-    "sv": ""
+    "en": "Sorry! None of those are for sale right now...",
+    "sv": "Tyvärr! Just nu finns inget till salu som matchar..."
   },
   "MARKET_LIKE_EXPLAINED": {
     "en": "",
     "sv": ""
   },
-  "MARKET_LABEL_PRICE": {
-    "en": "",
-    "sv": ""
-  },
   "MARKET_LABEL_DATE": {
     "en": "Published",
-    "sv": "Publicerad"
+    "sv": "Publicerad",
+    "fr": "Publié"
   },
   "MARKET_LABEL_IN_LOCATION": {
     "en": "in",
@@ -85,8 +104,9 @@
     "sv": ""
   },
   "MARKET_BUTTON_EXPLAINED": {
-    "en": "",
-    "sv": ""
+    "en": "About Bazardelux",
+    "sv": "Om Bazardelux",
+    "fr": "Le concept"
   },
   "MARKET_BULLET_SELL": {
     "en": "Sell on Bazardelux",
@@ -112,10 +132,59 @@
     "sv": "på Tradera",
     "fr": "sur Tradera"
   },
+  "MARKET_ALSO_FOR_SALE": {
+    "fr": "Aussi en vente actuellement:",
+    "en": "Also for sale now:",
+    "sv": "Fler föremål du skulle gilla:"
+  },
+  "MARKET_LABEL_END_REACHED": {
+    "en": "That's all for now!",
+    "sv": "Det var allt för idag!",
+    "fr": "C'est tout pour aujourd'hui"
+  },
+  "MARKET_LABEL_IN_LOCATION": {
+    "en": "in",
+    "sv": "i",
+    "fr": "à"
+  },
+  "MARKET_LABEL_ITEM_SOLD": {
+    "en": "Sorry, it s already sold...",
+    "sv": "Tyvärr, den är redan såld...",
+    "fr": "Désolé, c'est déjà vendu..."
+  },
+  "MARKET_LABEL_PRICE": {
+    "en": "Price",
+    "sv": "Till salu för",
+    "fr": "Prix"
+  },
+  "MARKET_PAGE_DESCRIPTION": {
+    "en": "Find beautiful things for sale on Facebook, Klue, Blocket, Tradera and more! A curated search engine for fashion, art and antics sold outside Auction Houses.",
+    "sv": "Handplockade vackra ting till salu på Facebook, Klue, Blocket, Tradera, med fler! Den enda kurerade sökmotorn för mode, konst och antikviteter till salu utanför autkionshusen.",
+    "fr": "Chassez les perles rares en vente de particulier à particulier sur Facebook, Klue, Tradera ou Leboncoin! Le seul moteur de recherche pour objets d'art ou de mode et antiquités vendus hors salle de vente."
+  },
+  "MARKET_PAGE_TITLE": {
+    "en": "Fashion, art and antiques from private sellers across Europe",
+    "sv": "Konst, mode och antikviteter privatsålda över hela Europa",
+    "fr": "Objets de mode, d'art et antiquités vendus par des particuliers en Europe"
+  },
+  "MARKET_SEARCH_BUTTON_LABEL": {
+    "en": "SEARCH",
+    "sv": "SÖK",
+    "fr": "CHERCHER"
+  },
+  "MARKET_SEARCH_PLACEHOLDER": {
+    "en": "what would you like to buy?",
+    "sv": "vad letar du efter?",
+    "fr": "que cherchez vous?"
+  },
+
 
   "FOOTER_LABEL_ABOUT": {
-    "en": "",
-    "sv": ""
+    "en": "About",
+    "sv": "Om oss"
+  },
+  "FOOTER_LABEL_MARKET": {
+    "en": "Bazardelux"
   },
   "FOOTER_LIKE_EXPLAINED": {
     "en": "",
