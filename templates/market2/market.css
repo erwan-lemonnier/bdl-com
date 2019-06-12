@@ -258,10 +258,6 @@ body, html {
     color: #FFFFFF;
 }
 
-.picture-container .item-expert-controls {
-    background-color: #E7E7E7;
-}
-
 .picture-container {
     font-size: 16px;
     background-color: #FFFFFF;
@@ -341,9 +337,6 @@ body, html {
     margin: 0;
     height: 100%;
     width: 100%;
-    {% if show_expert_controls %}
-    margin-top: 40px;
-    {% endif %}
 	cursor: pointer;
     background: rgb(0, 0, 0);
     background-color: #008080;
@@ -460,7 +453,6 @@ body, html {
 
 {% include 'market2/itemdetail-mobile.css' %}
 {% include 'market2/itemdetail-desktop.css' %}
-{% include 'market2/itemdetail-controls.css' %}
 
 
 .btn-sold, .btn-sold:hover, .btn-sold:active, .btn-sold:visited {

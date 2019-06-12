@@ -555,16 +555,16 @@ def do_search_market_html(query, page=0, country=None, lang=None, latest=False, 
     return res
 
 
-def insert_ad(htmls):
-    # Insert an ad in the results
-    ad = render_template(
-        'marketads/ad-messenger.html',
-        ad_picture='https://static.bazardelux.com/img/ad-messenger1.gif',
-        ad_alt='ad background',
-        ad_text='What is it worth?',
-        ad_link='<a href="https://m.me/kluemarket?ref=Welcome%20message" alr="messenger">ask us on<br>Messenger!</a>',
-    )
-    htmls.insert(3, ad)
+# def insert_ad(htmls):
+#     # Insert an ad in the results
+#     ad = render_template(
+#         'marketads/ad-messenger.html',
+#         ad_picture='https://static.bazardelux.com/img/ad-messenger1.gif',
+#         ad_alt='ad background',
+#         ad_text='What is it worth?',
+#         ad_link='<a href="https://m.me/kluemarket?ref=Welcome%20message" alr="messenger">ask us on<br>Messenger!</a>',
+#     )
+#     htmls.insert(3, ad)
 
 
 def do_get_item_forsale_html(id, lang=None):

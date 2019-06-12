@@ -76,13 +76,14 @@ function log_event(event_name, more_tags) {
         tags['url'] = [location.host, location.pathname].join('');
     }
 
-    console.log("Logging analytics event " + event_name + ": " + JSON.stringify(tags, null, 4));
+  /* console.log("Logging analytics event " + event_name + ": " + JSON.stringify(tags, null, 4));
 
-    ll(
-        'tagEvent',
-        event_name,
-        tags
-    );
+   * ll(
+   *     'tagEvent',
+   *     event_name,
+   *     tags
+   * );
+   */
 
     ga(
         'event',
