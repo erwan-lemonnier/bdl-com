@@ -74,20 +74,21 @@ def normalize_item_for_sale(item, language=None):
         item.prio = 'normal'
 
 
-def get_item_forsale(item_uid):
+def get_item_forsale(item_id):
     """Get an item forsale, even if it has been archived"""
     item = None
     with backend_token() as token:
-        log.info("Trying to get %s from index of items forsale" % item_uid)
+        log.info("Trying to get %s from index of items forsale" % item_id)
         item = ApiPool.api.client.get_item(
-            id=item_uid,
+            item_id=item_id,
             request_headers={
                 'Authorization': 'Bearer %s' % token,
             }
         )
 
         if is_error(item):
-            report_error("Failed to fetch item %s" % (item_uid), caught=item)
+            log.debug("Failed to fetch item %s: %s" % (item_id, ApiPool.api.model_to_json(item)))
+            report_error("Failed to fetch item %s" % (item_id), caught=item)
             return None
 
     return item
@@ -364,13 +365,13 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
         localized_url = gen_item_forsale_url(item, language)
 
         og_url = localized_url
-        og_title = '%s | Klue Market' % item.bdlitem.title
+        og_title = '%s | Bazardelux' % item.bdlitem.title
 
         og_description = item.bdlitem.description
         og_description = re.sub('<[bB][rR]>', ' ', og_description)
         meta_description = og_description
         og_image = item.bdlitem.picture_url_w600
-        html_page_title = '%s - %s %s | Klue Market' % (item.bdlitem.title, item.bdlitem.price, item.bdlitem.currency)
+        html_page_title = '%s - %s %s | Bazardelux' % (item.bdlitem.title, item.bdlitem.price, item.bdlitem.currency)
         show_header = False
 
         def patch_url(l):
@@ -379,7 +380,7 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
 
         # Let's find out the category path associated to this item, ie the
         # longuest :path:*: tag associated to it
-        tags = [t for t in item.tags if 'path:' in t]
+        tags = [t for t in item.bdlitem.tags if 'path:' in t]
         tags_by_length = sorted(tags, key=lambda t: t.count(':'))
         if tags_by_length:
             category_data = get_category_path_data(':%s:' % tags_by_length[-1], language)
@@ -573,10 +574,11 @@ def do_get_item_forsale_html(id, lang=None):
     else:
         language = get_page_language()
 
-    with backend_token() as token:
+    with backend_token():
         item = ApiPool.api.client.get_item(item_id=id)
 
     if is_error(item):
+        log.info("Failed to retrieve item %s" % item)
         report_error("Failed to retrieve item %s" % id, caught=item)
         res = ApiPool.www.model.ItemHtml(
             html=''
