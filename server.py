@@ -33,7 +33,7 @@ def before_request():
 @app.after_request
 def after_request(response):
     response.cache_control.max_age = 300
-    response.headers.set('Content-Security-Policy', "child-src 'self' *.facebook.com *.facebook.net *.kluemarket.com *.hotjar.com *.wisepops.com *.localytics.com *.cloudfront.net *.googleapis.com *.google-analytics.com local.kluemarket.com:3000")
+    response.headers.set('Content-Security-Policy', "child-src 'self' *.facebook.com *.facebook.net *.bazardelux.com *.hotjar.com *.wisepops.com *.localytics.com *.cloudfront.net *.googleapis.com *.google-analytics.com local.bazardelux.com:3000")
     return response
 
 

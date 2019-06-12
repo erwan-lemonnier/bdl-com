@@ -11,7 +11,7 @@ function focus_search(language) {
     if (i.length == 0) {
         // This is not the market view: open it!
         console.log("Opening market view");
-        document.location='https://kluemarket.com?focus=1';
+        document.location='https://bazardelux.com?focus=1';
     } else {
         // We are on the market page already: focus on input
         console.log("Focusing on search input");

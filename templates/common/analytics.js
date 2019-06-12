@@ -62,8 +62,7 @@ function log_event(event_name, more_tags) {
     tags = {
         referrer: '{{ referrer|safe }}',
         language: '{{ language|safe }}',
-        backend_version: '{{ backend_version|safe }}',
-        klue_domain: 'kluemarket.com',
+        klue_domain: 'bazardelux.com',
         page_name: '{{ page_name }}'
     };
 

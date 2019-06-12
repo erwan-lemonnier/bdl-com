@@ -37,7 +37,7 @@ function click_messenger_button(item_uid, origin_url, source, target, goto_url) 
 }
 
 function click_sell_info_button(item_uid, origin_url, source, target, goto_url) {
-    console.log("User clicked sell on kluemarket on p2p item: " + item_uid);
+    console.log("User clicked sell on sell button for item: " + item_uid);
     log_item_click(item_uid, origin_url, source, target, 'MarketItemSellInfo');
     document.location=goto_url;
     return false;

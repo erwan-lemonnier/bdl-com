@@ -3,7 +3,7 @@ from urllib.parse import quote_plus, urlencode
 import re
 from flask import request, render_template, make_response
 from unidecode import unidecode
-from pymacaron.auth import authenticate_http_request, backend_token
+from pymacaron.auth import backend_token
 from pymacaron.crash import crash_handler, report_error
 from pymacaron.exceptions import is_error
 from pymacaron.config import get_config
@@ -317,7 +317,7 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
     if language == 'sv':
         image_lang = 'sv'
 
-    og_image = 'https://static.kluemarket.com/img/kluemarket-%s.png' % image_lang
+    og_image = 'https://static.bazardelux.com/img/kluemarket-%s.png' % image_lang
 
     url_params = ''
     if query_words != '':
@@ -458,7 +458,7 @@ def serve_market_page(query_words, item_title=None, category_tag=None):
         label_like_explained=unicode_to_html(translate('MARKET_LIKE_EXPLAINED', language), keep_html=True),
         label_crown_explained=unicode_to_html(translate('MARKET_CROWN_EXPLAINED', language), keep_html=True),
         label_market_explained=unicode_to_html(translate('MARKET_BUTTON_EXPLAINED', language), keep_html=True),
-        url_market_explained='https://kluemarket.com/%s/%s' % (language, translate('URL_SELL_PAGE_LABEL', language)),
+        url_market_explained='https://bazardelux.com/%s/%s' % (language, translate('URL_SELL_PAGE_LABEL', language)),
         focus_search=focus_search,
         category_data=category_data,
         browse_data=browse_data,
@@ -491,7 +491,7 @@ def do_search_market_html(query, page=0, country=None, lang=None, latest=False, 
         page = 0
 
     # Call the internal search api
-    with backend_token() as token:
+    with backend_token():
 
         kwargs = {
             'query': query.strip(),
@@ -558,7 +558,7 @@ def insert_ad(htmls):
     # Insert an ad in the results
     ad = render_template(
         'marketads/ad-messenger.html',
-        ad_picture='https://static.kluemarket.com/img/ad-messenger1.gif',
+        ad_picture='https://static.bazardelux.com/img/ad-messenger1.gif',
         ad_alt='ad background',
         ad_text='What is it worth?',
         ad_link='<a href="https://m.me/kluemarket?ref=Welcome%20message" alr="messenger">ask us on<br>Messenger!</a>',
