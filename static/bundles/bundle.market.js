@@ -1,0 +1,10 @@
+jquery-1.11.2.min.js
+bootstrap.3.3.6.min.js
+jquery.magnific-popup.1.1.0.min.js
+lightslider.1.1.5.min.js
+masonry.4.1.1.pkgd.min.js
+imagesloaded.4.1.1.pkgd.min.js
+jquery.mloading.js
+jquery-ias.2.2.2.min.js
+jquery-ui.1.12.0.min.js
+jquery.autocomplete.1.4.1.min.js

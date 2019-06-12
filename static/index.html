@@ -1,0 +1,37 @@
+<head>
+  <script src="js/jquery.js"></script>
+  <!-- Google Analytics -->
+  <meta name="description" content="Bazardelux">
+
+  <!-- Facebook sharing -->
+  <meta property="og:url"           content="https://bazardelux.com" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Bazardelux" />
+  <meta property="og:description"   content="Bazardelux" />
+
+</head>
+<body>
+  <script>
+    // Identify the local country and call callback with it
+    // Return currency code or undefined
+    $.get(
+      "http://ipinfo.io",
+      function (response) {
+        country = response.country;
+        console.log("country is: "+country);
+        if (country == 'SE') {
+          window.location.replace("http://bazardelux.com/sv");
+        } else {
+          window.location.replace("http://bazardelux.com/en");
+        }
+      },
+      "jsonp"
+    ).fail(
+      function () {
+        console.log("country is unkonwn");
+        window.location.replace("http://bazardelux.com/en");
+      }
+    );
+
+  </script>
+</body>
