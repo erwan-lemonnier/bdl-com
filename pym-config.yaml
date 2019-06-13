@@ -10,7 +10,7 @@ aws_keypair: aws-bdl
 aws_region: eu-central-1
 aws_instance_type: t2.micro
 aws_cert_arn: arn:aws:acm:eu-central-1:058475745091:certificate/d56bdb36-7e17-4534-90de-f4216c2aa9c6
-aws_hosts_min: 2
+aws_hosts_min: 1
 aws_default_region: eu-central-1
 aws_access_key_id: AWS_BDL_ACCESS_KEY_ID
 aws_secret_access_key: AWS_BDL_SECRET_ACCESS_KEY
