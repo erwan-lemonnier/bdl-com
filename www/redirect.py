@@ -17,10 +17,10 @@ def redirect_if_needed():
     extension = domain.split('.')[-1]
     # uri = '/'.join(url.split('//')[1].split('/')[1:])
 
-    # Assume we should redirect to kluemarket.com, except if it's a temporary
+    # Assume we should redirect to bazardelux.com, except if it's a temporary
     # beanstalk environment during deployment
     target_domain = 'bazardelux.com'
-    if 'eu-west-1.elb.amazonaws.com' in domain or 'eu-west-1.elasticbeanstalk.com' in domain:
+    if 'eu-central-1.elb.amazonaws.com' in domain or 'eu-central-1.elasticbeanstalk.com' in domain:
         target_domain = domain
 
     log.info("URL requested is %s (domain:%s ext:%s)" % (url, domain, extension))

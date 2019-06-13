@@ -1,6 +1,5 @@
 import logging
 from flask import request
-from pymacaron.auth import generate_token
 from www.localisation import supported_languages
 from www.localisation import unicode_to_html
 from www.localisation import translate
