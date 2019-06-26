@@ -66,7 +66,7 @@ class Test(utils.Test):
         if self.port == '8080' or '172.17.0' in self.host:
             return
         url = self.assertGetRedirectsToHttps('/', same_path=False, code=302)
-        self.assertTrue(url.endswith('.com/sv'), "%s ends with .com/sv" % url)
+        self.assertTrue(url.endswith('.com/en'), "%s ends with .com/en" % url)
 
 
     @patch("www.localisation.request")
