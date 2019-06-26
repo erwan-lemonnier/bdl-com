@@ -9,7 +9,7 @@ aws_user: bdl-backend-publish
 aws_keypair: aws-bdl
 aws_region: eu-central-1
 aws_instance_type: t2.micro
-aws_cert_arn: arn:aws:acm:eu-central-1:058475745091:certificate/d56bdb36-7e17-4534-90de-f4216c2aa9c6
+aws_cert_arn: arn:aws:acm:eu-central-1:579726532991:certificate/6ae73043-4e81-4f62-b846-fd9b9714bafa
 aws_hosts_min: 1
 aws_default_region: eu-central-1
 aws_access_key_id: AWS_BDL_ACCESS_KEY_ID
@@ -30,4 +30,3 @@ env_secrets:
   - BDL_JWT_AUDIENCE
   - AWS_BDL_SECRET_ACCESS_KEY
   - AWS_BDL_ACCESS_KEY_ID
-

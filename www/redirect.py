@@ -2,20 +2,22 @@ import logging
 import re
 from flask import redirect, request
 from www.localisation import supported_languages
+from www.localisation import get_user_language
 
 
 log = logging.getLogger(__name__)
 
 
 def redirect_if_needed():
-    """Redirect *.bazardelux.com to bazardelux.com when needed +
-    redirect http to https except for pings"""
+    """Redirect *.bazardelux.com to bazardelux.com when needed + redirect http to
+    https except for pings
+
+    """
 
     url = request.url
 
     domain = url.split('//')[1].split('/')[0]
     extension = domain.split('.')[-1]
-    # uri = '/'.join(url.split('//')[1].split('/')[1:])
 
     # Assume we should redirect to bazardelux.com, except if it's a temporary
     # beanstalk environment during deployment
@@ -107,8 +109,7 @@ def redirect_if_needed():
         log.info("Url is already localized or should not be localized")
     else:
         log.info("Url is not localized and should be")
-        # language = get_user_language()
-        language = 'sv'
+        language = get_user_language()
         url = url.replace(target_domain, '%s/%s' % (target_domain, language))
         log.info("User prefers language %s. Redirecting to %s" % (language, url))
         do_redirect = True

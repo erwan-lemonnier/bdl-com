@@ -100,7 +100,12 @@ def get_user_language():
     log.info("User's Accept-Language are: %s" % langs)
 
     if 'sv' in langs:
+        log.info("User has sv among its languages: defaulting to it")
         return 'sv'
+
+    if 'en' in langs:
+        log.info("User has en among its languages: defaulting to it")
+        return 'en'
 
     # Let's try to find a matching language
     languages = list(request.accept_languages.values())
@@ -114,12 +119,13 @@ def get_user_language():
 
     # Defaults to babel's best match algorithm
     language = negotiate_locale(languages, supported_languages())
-    if language:
-        log.info("Babel identifies %s as user language [%s]" % (language, languages))
+    log.info("Babel identifies %s as user language [%s]" % (language, languages))
+    if language and language in supported_languages():
+        log.info("User has %s among its languages and it's a supported language: using it" % language)
         return language
 
-    log.info("Failed to find user's language from Accept-Languages [%s]. Defaulting to swedish" % languages)
-    return 'sv'
+    log.info("Failed to find user's language from Accept-Languages [%s]. Defaulting to english" % languages)
+    return 'en'
 
 
 def country_to_language(country):
