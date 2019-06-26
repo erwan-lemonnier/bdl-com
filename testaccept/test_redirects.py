@@ -133,27 +133,31 @@ class Test(utils.Test):
 
             # Redirect http to https on page urls
             ['http://127.0.0.1/', False, None, None],
-            ['http://bazardelux.com', True, 302, 'https://bazardelux.com/sv'],
-            ['http://bazardelux.com/', True, 302, 'https://bazardelux.com/sv'],
+            ['http://bazardelux.com', True, 302, 'https://bazardelux.com/en'],
+            ['http://bazardelux.com/', True, 302, 'https://bazardelux.com/en'],
             ['http://bazardelux.com/en', True, 302, 'https://bazardelux.com/en'],
             ['http://bazardelux.com/en/', True, 302, 'https://bazardelux.com/en'],
+            ['http://bazardelux.com/sv', True, 302, 'https://bazardelux.com/sv'],
+            ['http://bazardelux.com/sv/', True, 302, 'https://bazardelux.com/sv'],
             ['http://bazardelux.com/sv/blabla', True, 302, 'https://bazardelux.com/sv/blabla'],
             ['http://bazardelux.com/sv/blabla/', True, 302, 'https://bazardelux.com/sv/blabla'],
-            ['http://www.bazardelux.com', True, 302, 'https://bazardelux.com/sv'],
-            ['http://www.bazardelux.com/', True, 302, 'https://bazardelux.com/sv'],
+            ['http://www.bazardelux.com', True, 302, 'https://bazardelux.com/en'],
+            ['http://www.bazardelux.com/', True, 302, 'https://bazardelux.com/en'],
             ['http://www.bazardelux.com/en', True, 302, 'https://bazardelux.com/en'],
             ['http://www.bazardelux.com/en/', True, 302, 'https://bazardelux.com/en'],
+            ['http://www.bazardelux.com/sv', True, 302, 'https://bazardelux.com/sv'],
+            ['http://www.bazardelux.com/sv/', True, 302, 'https://bazardelux.com/sv'],
             ['http://www.bazardelux.com/sv/blabla', True, 302, 'https://bazardelux.com/sv/blabla'],
             ['http://www.bazardelux.com/sv/blabla/', True, 302, 'https://bazardelux.com/sv/blabla'],
             ['https://127.0.0.1/', False, None, None],
-            ['https://bazardelux.com', True, 302, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/', True, 302, 'https://bazardelux.com/sv'],
+            ['https://bazardelux.com', True, 302, 'https://bazardelux.com/en'],
+            ['https://bazardelux.com/', True, 302, 'https://bazardelux.com/en'],
             ['https://bazardelux.com/en', False, None, None],
             ['https://bazardelux.com/en/', False, None, None],
             ['https://bazardelux.com/sv/blabla', False, None, None],
             ['https://bazardelux.com/sv/blabla/', False, None, None],
-            ['https://www.bazardelux.com', True, 302, 'https://bazardelux.com/sv'],
-            ['https://www.bazardelux.com/', True, 302, 'https://bazardelux.com/sv'],
+            ['https://www.bazardelux.com', True, 302, 'https://bazardelux.com/en'],
+            ['https://www.bazardelux.com/', True, 302, 'https://bazardelux.com/en'],
             ['https://www.bazardelux.com/en', True, 302, 'https://bazardelux.com/en'],
             ['https://www.bazardelux.com/en/', True, 302, 'https://bazardelux.com/en'],
             ['https://www.bazardelux.com/sv/blabla', True, 302, 'https://bazardelux.com/sv/blabla'],
@@ -180,34 +184,22 @@ class Test(utils.Test):
     @patch("www.redirect.is_https_request")
     def test_redirects_to_language(self, s, r, m1, m2):
 
-        elbenv = 'awseb-e-6-AWSEBLoa-UJ1UCPBDE5KY-1623985950.eu-west-1.elb.amazonaws.com:443'
+        elbenv = 'awseb-e-6-AWSEBLoa-UJ1UCPBDE5KY-1623985950.eu-central-1.elb.amazonaws.com:443'
 
         tests = [
             # Url required, http Accept-Language, does redirect?, redirec code, redirect where
             ['https://bazardelux.com', 'sv,en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv'],
+            ['https://bazardelux.com/', 'en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/en'],
+            ['https://bazardelux.com', 'en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/en'],
             ['https://bazardelux.com/', 'sv,en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/calculator', 'sv,en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv/calculator'],
             ['https://bazardelux.com/sv', 'sv,en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', False, None, 'https://bazardelux.com/sv'],
             ['https://bazardelux.com/sv/', 'sv,en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', False, None, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/sv/calculator', 'sv,en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', False, None, 'https://bazardelux.com/sv/calculator'],
 
-            ['https://bazardelux.com', 'en-US;q=0.8,en,sv;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/calculator', 'en-US;q=0.8,en,sv;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv/calculator'],
-
-            ['https://bazardelux.com', 'en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/calculator', 'en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', True, 302, 'https://bazardelux.com/sv/calculator'],
-            ['https://bazardelux.com/sv', 'en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', False, None, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/sv/calculator', 'en-US;q=0.8,en;q=0.6,lt;q=0.4,fr;q=0.2', False, None, 'https://bazardelux.com/sv/calculator'],
-
-            ['https://bazardelux.com', 'en-us', True, 302, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/calculator', 'en-us', True, 302, 'https://bazardelux.com/sv/calculator'],
+            ['https://bazardelux.com', 'en-us', True, 302, 'https://bazardelux.com/en'],
             ['https://bazardelux.com/sv', 'en-us', False, None, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/sv/calculator', 'en-us', False, None, 'https://bazardelux.com/sv/calculator'],
 
-            ['https://bazardelux.com', '', True, 302, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/calculator', '', True, 302, 'https://bazardelux.com/sv/calculator'],
+            ['https://bazardelux.com', '', True, 302, 'https://bazardelux.com/en'],
             ['https://bazardelux.com/sv', '', False, None, 'https://bazardelux.com/sv'],
-            ['https://bazardelux.com/sv/calculator', '', False, None, 'https://bazardelux.com/sv/calculator'],
 
             # And all those urls shouldn't be localized:
             ['https://bazardelux.com/ping', 'sv', False, None, ''],
@@ -219,44 +211,12 @@ class Test(utils.Test):
             ['https://bazardelux.com/sitemap', 'sv', False, None, ''],
 
             # A live bug: infinite redirect loop...
-            ['https://market-170314-2011-130.qqgmspnmtq.eu-west-1.elasticbeanstalk.com:443/secured/version', 'sv', False, None, ''],
-
-            # Certificates
-            ['http://bazardelux.com/cert/foobar', 'sv', True, 302, 'https://bazardelux.com/sv/cert/foobar'],
-            ['https://bazardelux.com/cert/foobar', 'sv', True, 302, 'https://bazardelux.com/sv/cert/foobar'],
-            ['https://bazardelux.com/cert/foobar', 'en', True, 302, 'https://bazardelux.com/sv/cert/foobar'],
-            ['http://bazardelux.com/en/cert/foobar', 'en', True, 302, 'https://bazardelux.com/en/cert/foobar'],
-            ['https://bazardelux.com/sv/cert/foobar', 'en', False, None, ''],
-            ['https://bazardelux.com/cert/5nlf24/hatt-burberry_1500-2000-sek', 'en', True, 302, 'https://bazardelux.com/sv/cert/5nlf24/hatt-burberry_1500-2000-sek'],
+            ['https://market-170314-2011-130.qqgmspnmtq.eu-central-1.elasticbeanstalk.com:443/secured/version', 'sv', False, None, ''],
 
             # And beanstalk env should be handled as bazardelux.com
-            ['https://%s' % elbenv, '', True, 302, 'https://%s/sv' % elbenv],
+            ['https://%s' % elbenv, '', True, 302, 'https://%s/en' % elbenv],
             ['https://%s/sv' % elbenv, 'sv', False, None, ''],
-            ['https://%s/sv/pricedb' % elbenv, 'sv', False, None, ''],
             ['https://%s/ping' % elbenv, 'sv', False, None, ''],
-
-            # Legacy redirects (code 301)
-            [
-                'http://bazardelux.com/en/p/price/Oil-painting-on-canvas-of-a-dog-in-a-gold-frame-canvas-size-10-high-8-wide_US_2016-10-22',
-                '',
-                True,
-                301,
-                'https://bazardelux.com/sv/pris/Oil-painting-on-canvas-of-a-dog-in-a-gold-frame-canvas-size-10-high-8-wide_US_2016-10-22',
-            ],
-            [
-                'https://bazardelux.com/en/whatisitworth/Kristina-von-Hornsleth-Litografisk-tryk-Old-Friends-201:DK:2017-01-20',
-                '',
-                True,
-                301,
-                'https://bazardelux.com/en/price/Kristina-von-Hornsleth-Litografisk-tryk-Old-Friends-201_DK_2017-01-20',
-            ],
-            [
-                'https://bazardelux.com/sv/vadardenvard/Bjorn-Weckstrom-manschettknappar-1-par-18-k-guld:SE:2016-11-07',
-                '',
-                True,
-                301,
-                'https://bazardelux.com/sv/pris/Bjorn-Weckstrom-manschettknappar-1-par-18-k-guld_SE_2016-11-07',
-            ],
 
             # Legitimate paths don't get redirected
             ['https://bazardelux.com/sv/pris/JORDGLOB-Rath_SE_2016-11-16', '', False, None, None],
