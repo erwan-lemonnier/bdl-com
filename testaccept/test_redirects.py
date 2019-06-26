@@ -69,7 +69,7 @@ class Test(utils.Test):
         self.assertTrue(url.endswith('.com/sv'), "%s ends with .com/sv" % url)
 
 
-    @patch("www.common.request")
+    @patch("www.localisation.request")
     @patch("www.redirect.request")
     @patch("www.redirect.redirect")
     @patch("www.redirect.is_https_request")
@@ -174,7 +174,7 @@ class Test(utils.Test):
                 self.assertEqual(redirect_if_needed(), None, "%s not redirected" % url)
 
 
-    @patch("www.common.request")
+    @patch("www.localisation.request")
     @patch("www.redirect.request")
     @patch("www.redirect.redirect")
     @patch("www.redirect.is_https_request")
