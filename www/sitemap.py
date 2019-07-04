@@ -10,6 +10,6 @@ log = logging.getLogger(__name__)
 def serve_sitemap():
     """Serve sitemap for the search service"""
 
-    map_url = "https://static.baxardelux.com/sitemap-www-https-bazardelux-com.xml"
+    map_url = "https://static.bazardelux.com/sitemap-www-https-bazardelux-com.xml"
     log.info("Redirecting to %s" % (map_url))
     return redirect(map_url, code=301)
