@@ -22,7 +22,7 @@
     margin: 0 0;
 }
 
-.menu3-desktop .icon-klue-div {
+.menu3-desktop .icon-logo-div {
     display: block;
     position: absolute;
     margin-top: 10px;
@@ -83,7 +83,7 @@
     line-height: 18px;
 }
 
-.menu3-desktop .icon-klue {
+.menu3-desktop .icon-logo {
     pointer-events: auto;
     display: block;
     position: absolute;

@@ -45,7 +45,7 @@ function click_see_more(item_uid, item_url) {
 
 // Show item announce (cert or imported data)
 function item_click(item_uid, item_origin_url, item_url) {
-    console.log("User clicked on Klue item " + item_uid);
+    console.log("User clicked on BDL item " + item_uid);
 
     log_click_link(
         'MarketShowItem',
