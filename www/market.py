@@ -611,7 +611,7 @@ def gen_item_forsale_url(item, language=None):
     if not language:
         language = country_to_language(item.bdlitem.country)
     forsale = translate('URL_FORSALE_LABEL', language)
-    return '%s/%s/%s/%s' % (get_base_url(), language, forsale, title)
+    return 'https://bazardelux.com/%s/%s/%s' % (language, forsale, title)
 
 
 def gen_item_forsale_title(item):
