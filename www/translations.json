@@ -57,7 +57,7 @@
     "fr": "La crème des ventes de particulier à particulier dans toute l'Europe"
   },
   "MARKET_HEADER_LINE2": {
-    "en": "Our smart AI select the finest things for sale right now",
+    "en": "Our smart AI selects the finest things for sale right now",
     "sv": "Vår smarta AI väljer ut det bästa till salu just nu",
     "fr": "Notre AI choisie les plus belles choses en vente aujourd'hui"
   },
@@ -173,11 +173,10 @@
     "fr": "CHERCHER"
   },
   "MARKET_SEARCH_PLACEHOLDER": {
-    "en": "what would you like to buy?",
-    "sv": "vad letar du efter?",
+    "en": "tell me your wish...",
+    "sv": "vad önskar du dig?",
     "fr": "que cherchez vous?"
   },
-
 
   "FOOTER_LABEL_ABOUT": {
     "en": "About",
