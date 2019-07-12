@@ -69,8 +69,6 @@ def get_menu_translations(language):
         'url_link_pricedb': '%s/%s' % (get_base_url(language=language), translate('MENU2_PRICEDB', language)),
         'label_link_pricedb': unicode_to_html(translate('MENU2_PRICEDB_LABEL', language)),
 
-        'label_link_sell': unicode_to_html(translate('MENU2_SELL_LABEL', language)),
-
         'url_link_messenger': 'https://m.me/kluemarket?ref=Welcome%20message',
 
         'label_search_placeholder': unicode_to_html(translate('MARKET_SEARCH_PLACEHOLDER', language)),
@@ -78,35 +76,24 @@ def get_menu_translations(language):
         'search_url': get_base_url(language=language),
 
         'show_search_tray': False,
+        'url_link_logo': 'https://bazardelux.com',
     }
-
-    menu_data['url_link_sell'] = 'https://www.klue.se'
-    if language != 'sv':
-        menu_data['url_link_sell'] = 'https://www.klue.se/en'
-
-    menu_data['url_link_logo'] = menu_data['url_link_sell']
 
     return menu_data
 
 
 def get_footer_data(language):
     return [
-        {
-            'name': 'Faq',
-            'label': 'FAQ',
-            'url': '%s/faq' % get_base_url(language=language),
-            'active': False,
-        },
-        {
-            'name': 'Blog',
-            'label': 'Blog',
-            'url': 'https://blog.kluemarket.com',
-            'active': False,
-        },
-        {
-            'name': 'About',
-            'label': unicode_to_html(translate('FOOTER_LABEL_ABOUT', language)),
-            'url': '%s/about' % get_base_url(language=language),
-            'active': False,
-        },
+        # {
+        #     'name': 'Faq',
+        #     'label': 'FAQ',
+        #     'url': '%s/faq' % get_base_url(language=language),
+        #     'active': False,
+        # },
+        # {
+        #     'name': 'About',
+        #     'label': unicode_to_html(translate('FOOTER_LABEL_ABOUT', language)),
+        #     'url': '%s/about' % get_base_url(language=language),
+        #     'active': False,
+        # },
     ]
