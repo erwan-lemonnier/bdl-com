@@ -1,14 +1,14 @@
 # Bazardelux
 
-Bazardelux.com was a search engine for finer things being sold by private
-persons accross Sweden and Europe.
+Bazardelux.com was a search engine for luxury second hand goods sold by private
+persons on peer-to-peer sites accross Sweden and Europe.
 
 ## Architecture
 
 Bazardelux was made of 3 components:
 
 * [A website](https://github.com/erwan-lemonnier/bdl-com) featuring flexible
-  text search and infinite scroll, displaying a selection of finer things being
+  text search and infinite scroll, displaying a selection of items being sold
   sold by individuals across Europe through platforms such as Tradera, Blocker,
   eBay or facebook marketplace.
 
