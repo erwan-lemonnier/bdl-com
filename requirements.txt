@@ -5,7 +5,7 @@ pycodestyle
 nose
 elasticsearch>=2.0.0,<3.0.0
 Flask-Babel==0.11.1
-Babel==2.3.4
+Babel==2.9.1
 Flask-Compress==1.4.0
 requests-aws4auth==0.9
 Unidecode==0.4.19
